@@ -201,10 +201,7 @@ input:focus {
     }
 }
 
-/* Left Section (Lumin Logo) Hover Animation */
-.owlogo:hover .owl {
-    transform: rotate(10deg) scale(1.05);
-}
+
 
 /* Link Hover Effect */
 .signup-text a {

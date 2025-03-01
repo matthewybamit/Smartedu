@@ -13,36 +13,8 @@ header {
     
 }
 
-nav {
-    display: flex;
-    
-    align-items: center;
-   
-}
 
-nav ul {
-    margin-left: 20%;
-    list-style: none;
-    display: flex;
-    gap: 90px;
-}
-.logowl {
-    
-    width: 60px;
-    height: auto;
-    margin-left: 10%;
-}
-.logo {
-    font-family: "Bigelow Rules", serif;
-    
-    font-size: 40px ;
-    
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
+
 
 .hero {
     height: 650px;
@@ -137,9 +109,286 @@ button {
 }
 
 footer {
-    background-color: #003366;
+    background-color: #122D64;
     color: white;
     text-align: center;
     padding: 20px;
+   
+}
+
+footer ul {
+    margin-bottom: 40px;
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    justify-content: center;
+}
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+.container {
+    background: linear-gradient(to bottom,#1F3A72 0%, #82A0DD 90%);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    
+    padding: 20px;
+    
+}
+.right-section, .left-section {
+    flex: 1;
+}
+.left-section {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+}
+
+.owl-img {
+    margin-left: -90px;
+    height: 370px;
+    
+    margin-top: -170px;
+
+    
+}
+.owls {
+    
+    margin-right: 50px;
+    
+    width: 30%;
+
+    
+}
+.cy {
+    
     margin-top: 50px;
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.text-box {
+    margin-top: 50px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    color: black;
+    justify-content: center;
+    display: flex;
+    width: 70%;
+    height: 40%;
+    
+    
+}
+
+.highlight {
+    margin-left: 4%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #E67E22;
+    font-family: "manrope", sans-serif;
+    margin-top: 7%;
+    
+    
+}
+
+.right-section {
+    
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    
+    width: 50%;
+}
+.top {
+    margin-top: 25px;
+    display: flex;
+    color: white;
+}
+.bot {
+    display: flex;
+    color: white;
+}
+.option {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    display: flex;
+    
+    background: white;
+    width: 85px;
+
+    
+    border-radius: 15px;
+    color: black;
+}
+.vid, .rid {
+    font-family: "Manrope", sans-serif;
+    font-weight: bold;
+}
+.top-p, .bot-p {
+    margin-left: 3%;
+    font-weight: 15px;
+    font-family: "Manrope", sans-serif;
+    margin-top: 60px;
+    font-size: 20px;
+    width: 45%;
+}
+.viddd{
+    width: 60px;
+    height: auto;
+}
+.readdd {
+    width: 70px;
+    height: auto;
+}
+.video-icon {
+    margin-top: 10px;
+    background: url('video-icon.png') no-repeat center;
+    
+    
+}
+
+.read-icon {
+    margin-top: 10px;
+    background: url('read-icon.png') no-repeat center;
+    
+}
+.option-text{
+    margin-top: 20px;
+    background-color: seashell;
+    height: 20px;
+    
+}
+
+.container2 {
+    flex-basis: 100%;
+    margin-top: 5%;
+}
+
+.pt {
+    margin-left: 11%;
+    margin-bottom: 3%;
+    color: black;
+    font-size: 30px;
+    font-family: "Manrope", sans-serif;
+    font-weight: bold;
+}
+
+.topics-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.topic-card {
+    background: white;
+    padding: 15px;
+    margin-left: 2%;
+    border-radius: 15px;
+    box-shadow: 2px 5px 13px rgba(0, 0, 0, 0.1);
+    width: 240px;
+    position: relative;
+    
+}
+
+.star {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 24px;
+    color: orange;
+}
+.stars {
+    width: 40px;
+    height: auto;
+}
+h3 {
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+p {
+    font-weight: 10px;
+    padding-left: 16%;
+    font-size: 14px;
+    
+}
+
+.view-btn {
+
+    background-color: #C97920;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btn-align {
+    
+    padding-left: 35%;
+    
+}
+.view-more {
+    display: flex;
+    justify-content: center;
+    width: 7%;
+    margin-bottom: 20px;
+    color: #122D64;
+    margin-top: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.vmore {
+    display: flex;
+    justify-content: center;
+    
+}
+.customization-section {
+    display: flex;
+    margin-top: 7%;
+    
+ 
+}
+.persobutton {
+    text-align: right;
+}
+.personalize-btn {
+    background-color: #C97920;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.lefty {
+    color: black;
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 60%;
+    
+    
+    font-size: 20px;
+}
+.paragraph {
+    text-align: justify;
+}
+
+.rightright {
+   
 }
