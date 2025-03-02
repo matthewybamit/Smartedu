@@ -1,17 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
 
-header {
-    height: auto;
-    background-color: #122D64;
-    color: #fff;
-    
-}
+
 
 
 
@@ -108,27 +102,7 @@ button {
     margin-top: 10px;
 }
 
-footer {
-    background-color: #122D64;
-    color: white;
-    text-align: center;
-    padding: 20px;
-   
-}
 
-footer ul {
-    margin-bottom: 40px;
-    display: flex;
-    list-style: none;
-    gap: 60px;
-    justify-content: center;
-}
-footer ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    
-}
 
 .container {
     background: linear-gradient(to bottom,#1F3A72 0%, #82A0DD 90%);
@@ -389,6 +363,4 @@ p {
     text-align: justify;
 }
 
-.rightright {
-   
-}
+

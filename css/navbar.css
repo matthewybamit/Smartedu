@@ -1,10 +1,23 @@
+header {
+    height: auto;
+    background-color: #122D64;
+    color: #fff;
+    
+}
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
 nav {
     display: flex;
-    
+    font-family: Arial, sans-serif;
     align-items: center;
    
 }
-.home1 {
+.home1, .style1 {
     color: #C97920;
 }
 nav ul {
