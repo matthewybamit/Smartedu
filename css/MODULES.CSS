@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    height: auto;
+    background-color: #122D64;
+    color: #fff;
+    
+}
+
+nav {
+    display: flex;
+    
+    align-items: center;
+   
+}
+
+nav ul {
+    margin-left: 35%;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+
+nav ul li {
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: black; 
+    transition: color 0.3s ease;
+}
+
+
+nav ul li:hover a {
+    color: #C97920; 
+}
+.image-button {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    left:60px;
+}
+
+.image-button img {
+    width: 50px; /* Adjust size as needed */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+.logowl {
+    
+    width: 60px;
+    height: auto;
+    margin-left: 10%;
+}
+.logo {
+    font-family: "Bigelow Rules", serif;
+    
+    font-size: 40px ;
+    
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+.background{
+    position:relative;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    
+    
+    background: linear-gradient(to bottom,#122D64, #82A0DC);
+    color: white;
+}
+.modules-txt {
+    position:absolute;
+    text-align: center;
+    margin-left: 550px;
+    font-size: 30px;
+    
+}
+ .Modules {
+  
+position: absolute;
+background-color: #122D64;
+border-style: solid;
+border-color: black;
+border-width: 2px;
+padding: 330px 580px;
+border-radius: 10px;
+margin-left: 50px;
+margin-right: 50px;
+margin-top: 100px;
+ }
+
+ .quiz {
+    position:absolute;
+top: 35px;
+right: 230px;
+background-color: transparent;
+font-size: 15px;
+color:white;
+background: none;  /* Removes background color */
+border: none;      /* Removes border/outline */
+outline: none;     /* Removes outline when focused */
+padding: 5px 10px; /* Adjust padding if needed */
+cursor: pointer;   /* Keeps the cursor behavior */
+}
+.assignments {
+    position:absolute;
+    top: 35px;
+    right: 80px;
+    background-color: transparent;
+    font-size: 15px;
+    color:white;
+        background: none;  /* Removes background color */
+        border: none;      /* Removes border/outline */
+        outline: none;     /* Removes outline when focused */
+        padding: 5px 10px; /* Adjust padding if needed */
+        cursor: pointer;   /* Keeps the cursor behavior */
+}
+
+.content {
+    position: absolute;
+    overflow-y: auto; /* Enable scrollbar */
+   
+    padding: 250px  550px;
+    left: 25px;
+    top: 100px;
+}
+.quiz-content{
+    padding:100px 80px;
+    position:relative;
+    background-color: white;
+    border-radius: 10px;
+}
+.quiz-content h1{
+   position:absolute;
+    bottom: -40px;
+    left:-10px;
+color:white;
+font-size: 15px;
+white-space: nowrap; 
+
+
+}
+.grid-content {
+    position:absolute;
+    display: grid;
+    grid-template-columns:auto auto auto auto auto;
+    grid-gap:70px 50px;
+    padding: 5px;
+    top: 5px;
+    left: 45px;
+} 
+/* Custom Scrollbar */
+.content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #C97920;
+    border-radius: 4px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
