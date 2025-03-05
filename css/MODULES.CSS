@@ -13,37 +13,7 @@ header {
     
 }
 
-nav {
-    display: flex;
-    
-    align-items: center;
-   
-}
 
-nav ul {
-    margin-left: 35%;
-    list-style: none;
-    display: flex;
-    gap: 50px;
-}
-
-
-nav ul li {
-    padding: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-
-nav ul li a {
-    text-decoration: none;
-    color: black; 
-    transition: color 0.3s ease;
-}
-
-
-nav ul li:hover a {
-    color: #C97920; 
-}
 .image-button {
     position: absolute;
     border: none;
@@ -70,16 +40,11 @@ nav ul li:hover a {
     font-size: 40px ;
     
 }
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
+
 .background{
-    position:relative;
-    height: 800px;
+    height: 900px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     
     
     background: linear-gradient(to bottom,#122D64, #82A0DC);
@@ -88,8 +53,9 @@ nav ul li a {
 .modules-txt {
     position:absolute;
     text-align: center;
-    margin-left: 550px;
+    
     font-size: 30px;
+    margin-top: 30px;
     
 }
  .Modules {
@@ -101,7 +67,7 @@ border-color: black;
 border-width: 2px;
 padding: 330px 580px;
 border-radius: 10px;
-margin-left: 50px;
+
 margin-right: 50px;
 margin-top: 100px;
  }

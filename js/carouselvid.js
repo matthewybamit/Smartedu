@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextBtn = document.querySelector(".next");
 
     let scrollAmount = 0;
-    const step = 300; // Adjust based on video item width
+    const step = 300; 
 
     nextBtn.addEventListener("click", () => {
         carousel.scrollTo({
