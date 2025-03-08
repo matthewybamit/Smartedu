@@ -188,7 +188,7 @@ border-radius: 10px;
     position: absolute;
 width: 250px;
 height: 500px;
-left: 40px;
+left: 160px;
 top: 360px;
 background-color:  #F0F1F3;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -258,10 +258,11 @@ white-space: nowrap;
     margin-bottom: 10px;
     font-size: 10px; /* Use margin instead of absolute positioning */
 }
-.topmid{  position: absolute;
+.topmid{  
+    position: absolute;
     width: 550px;
     height: 250px;
-    left: 320px;
+    left: 440px;
     top: 360px;
     background-color:  #F0F1F3;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -304,7 +305,7 @@ white-space: nowrap;
 .quiz {
     
         background-size: 100% 100%;
-        width: 150px; 
+        width: 190px; 
         height: 160px;
    
 }
@@ -327,7 +328,7 @@ white-space: nowrap;
     width: 470px;
     height: 190px; /* Adjust width as needed */
     top: 630px;
-    left:320px;
+    left:440px;
     
 }
 
@@ -368,7 +369,7 @@ white-space: nowrap;
     top: 360px;
     text-align: center;
     height:460px;
-    right: 20px;
+    right: 140px;
     color:black;
 }
 
