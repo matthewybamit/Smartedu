@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartEdu</title>
-    <link rel="stylesheet" href="css/video.css">
+    <title>Quiz Page</title>
+    <link rel="stylesheet" href="css/startquiz.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -18,24 +17,25 @@
             <img src="photos/orange.png"  class="logowl">
             <div class="logo">Lumin</div>
             <ul>
-                <li><a href="landing_login.html">Home</a></li>
+                <li><a href="landing_login.html" >Home</a></li>
                 <li><a href="#" class="style1">Styles</a></li>
                 <li><a href="MODULES.HTML">Modules</a></li>
                 <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Log out</a></li>
+                <li><a href="#">Log Out</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="container">
-        <div class="title"> Recognizing Shapes </div>
-        <div class="video-container"> </div>
-        <div class="container2">
-            <div class="abt">ABOUT</div>
-            <div class="parag">Learn about recognizing and naming different shapes, such as circles, ovals, triangles, and various types of quadrilaterals like rectangles, squares, rhombuses, and trapezoids. The video explains the properties of each shape and how to distinguish them from one another. </div>
+        <div class="quiz-card">
+            <div class="quiz-image"></div>
+            <div class="caption">There are many variations (ito kunwari module)</div>
+            <button class="start-btn" onclick="location.href='quizone.html'">START QUIZ</button>
+
+            
         </div>
     </div>
 
-   
+    <script src="js/startquiz.js"></script>
 </body>
 </html>
