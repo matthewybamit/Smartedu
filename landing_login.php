@@ -18,10 +18,10 @@
             <img src="photos/orange.png"  class="logowl">
             <div class="logo">Lumin</div>
             <ul>
-                <li><a href="#" class="home1">Home</a></li>
-                <li><a href="styles.html">Styles</a></li>
-                <li><a href="MODULES.HTML">Modules</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="landing_logout.php">Home</a></li>
+                <li><a href="styles.php">Styles</a></li>
+                <li><a href="MODULES.php">Modules</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="#">Log Out</a></li>
             </ul>
         </nav>

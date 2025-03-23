@@ -22,12 +22,11 @@
             <img src="photos/orange.png"  class="logowl">
             <div class="logo">Lumin</div>
             <ul>
-                <li><a href="landing_logout.html">Home</a></li>
-                <li><a href="styles.html">Styles</a></li>
-                <li><a href="MODULES.HTML">Modules</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
+               <li><a href="landing_logout.php">Home</a></li>
+                <li><a href="styles.php">Styles</a></li>
+                <li><a href="MODULES.php">Modules</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="#">Log Out</a></li>
-                
             </ul>
             
         </nav>
@@ -35,15 +34,18 @@
     <div class="background">
         <h1 class="modules-txt">DASHBOARD</h1>
         <div class="topbox">
+            <!-- Profile Image Placeholder -->
             <label for="fileInput" class="circle-button">
-                <img src="photos/1.png" alt="Image" class="button-image">
+                <img src="photos/default-avatar.png" alt="Image" id="profileImage" class="button-image"> <!-- Profile Image ID -->
                 <span class="button-text">Image</span>
             </label>
             <input type="file" id="fileInput" accept="image/*" style="display: none;">
             
             <div class="info">
-                <h3 class="name1">Name</h3>
-                <h3 class="age2">Age</h3>
+                <!-- Name Placeholder -->
+                <h3 class="name1" id="userName">Name</h3> <!-- Name ID -->
+                <!-- Email Placeholder -->
+                <h3 class="age2" id="age">Age</h3> <!-- Email ID -->
             </div>
 
             <div class="score-section">
@@ -101,24 +103,25 @@
             </div>
         </div>
         
-            <div class="profile-box">
-                <div class="profile-row">
-                    <a href="#" class="edit-label">Edit Name</a>
-                    <span class="value-label">Name</span>
-                </div>
-                <div class="profile-row">
-                    <a href="#" class="edit-label">Edit Email</a>
-                    <span class="value-label">Email</span>
-                </div>
-                <div class="profile-row">
-                    <a href="#" class="edit-label">Edit Username</a>
-                    <span class="value-label">Username</span>
-                </div>
-                <div class="profile-row">
-                    <a href="#" class="edit-label">Edit Password</a>
-                    <span class="value-label">******* </span>
-                </div>
-            </div>
+        <div class="profile-box">
+    <div class="profile-row">
+        <a href="#" class="edit-label">Edit Name</a>
+        <span class="value-label" id="displayName">Name</span> <!-- Added ID "displayName" -->
+    </div>
+    <div class="profile-row">
+        <a href="#" class="edit-label">Edit Email</a>
+        <span class="value-label" id="displayEmail">Email</span> <!-- Added ID "displayEmail" -->
+    </div>
+    <div class="profile-row">
+        <a href="#" class="edit-label">Edit Username</a>
+        <span class="value-label" id="displayUsername">Username</span> <!-- Added ID "displayUsername" -->
+    </div>
+    <div class="profile-row">
+        <a href="#" class="edit-label">Edit Password</a>
+        <span class="value-label">******* </span>
+    </div>
+</div>
+
       
         <div class="overall-section">
     <h2>Overall</h2>
@@ -138,8 +141,8 @@
 
 
     </div>
-       
-   
+    
+    <script src="js/firebaseAuth.js"></script> 
     <script>
         const ctx = document.getElementById('overallChart').getContext('2d');
         const overallChart = new Chart(ctx, {
@@ -161,6 +164,6 @@
             }
         });
     </script>
-    
+   
 </body>
 </html>

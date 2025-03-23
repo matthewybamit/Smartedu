@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Page</title>
-    <link rel="stylesheet" href="css/quizone.css">
+    <link rel="stylesheet" href="css/truefalse.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +18,10 @@
             <img src="photos/orange.png"  class="logowl">
             <div class="logo">Lumin</div>
             <ul>
-                <li><a href="landing_login.html" >Home</a></li>
-                <li><a href="#" class="style1">Styles</a></li>
-                <li><a href="MODULES.HTML">Modules</a></li>
-                <li><a href="#">Dashboard</a></li>
+               <li><a href="landing_logout.php">Home</a></li>
+                <li><a href="styles.php">Styles</a></li>
+                <li><a href="MODULES.php">Modules</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="#">Log Out</a></li>
             </ul>
         </nav>
@@ -33,10 +33,9 @@
     <div class="quiz-question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum tincidunt lectus, at varius augue sollicitudin in.
     </div>
     <div class="quiz-options">
-        <button class="quiz-option">A. bisbisis</button>
-        <button class="quiz-option">B. avavas</button>
-        <button class="quiz-option">C. iwiww</button>
-        <button class="quiz-option">D. daixiait</button>
+        <button class="quiz-option"> TRUE</button>
+        <button class="quiz-option"> FALSE</button>
+      
     </div>
     <div class="quiz-navigation">
         <button class="nav-btn left-btn"></button>
@@ -46,10 +45,11 @@
         <button class="nav-btn right-btn"></button>
     </div>
     </div>
+
 </div>
 </div>
 
-<script src="js/quizone.js"></script>
+<script src="js/truefalse.js"></script>
 </body>
 </html>
           

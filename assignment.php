@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Page</title>
-    <link rel="stylesheet" href="css/truefalse.css">
+    <link rel="stylesheet" href="css/assignment.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +18,10 @@
             <img src="photos/orange.png"  class="logowl">
             <div class="logo">Lumin</div>
             <ul>
-                <li><a href="landing_login.html" >Home</a></li>
-                <li><a href="#" class="style1">Styles</a></li>
-                <li><a href="MODULES.HTML">Modules</a></li>
-                <li><a href="#">Dashboard</a></li>
+                <li><a href="landing_login.php" >Home</a></li>
+                <li><a href="styles.php" class="style1">Styles</a></li>
+                <li><a href="MODULES.php">Modules</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="#">Log Out</a></li>
             </ul>
         </nav>
@@ -29,27 +29,34 @@
 
     <div class="container">
         <div class="quiz-card">
-            <div class="quiz-progress">4/10
-    <div class="quiz-question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum tincidunt lectus, at varius augue sollicitudin in.
+        
+       
+    <div class="quiz-question">
+        facilisis mi, at vestibulum sapien porta ac. Phasellus eu neque in mi accumsan imperdiet. Aenean vel tellus
+                fringilla, tincidunt orci sit amet, tempus libero. Mauris in urna euismod, sodales ex eu, vestibulum odio. Nunc vitae
+                orci augue. Aliquam sollicitudin vel mi a rutrum. Ut rhoncus pellentesque congue.
     </div>
+
     <div class="quiz-options">
-        <button class="quiz-option"> TRUE</button>
-        <button class="quiz-option"> FALSE</button>
-      
+        <button class="quiz-option" id="option-a"><span class="option-circle">A</span> Answer</button>
+        <button class="quiz-option" id="option-b"><span class="option-circle">B</span> Answer</button>
+        <button class="quiz-option" id="option-c"><span class="option-circle">C</span> Answer</button>
+        <button class="quiz-option" id="option-d"><span class="option-circle">D</span> Answer</button>
     </div>
+
     <div class="quiz-navigation">
-        <button class="nav-btn left-btn"></button>
+        
         <div class="circle-check">
             <i class="fas fa-check"></i>
         </div>
-        <button class="nav-btn right-btn"></button>
+        
     </div>
-    </div>
-
+    
 </div>
 </div>
 
-<script src="js/truefalse.js"></script>
+<script src="js/assignment.js"></script>
 </body>
 </html>
           
+    
