@@ -46,12 +46,13 @@ include 'php_functions/signup_function.php';
                 
                 <button type="submit" class="sign-in">Sign Up</button>
             </form>
-            <p class="signup-text">Don't have an account? <a href="login.php">Sign In</a></p>
+            <p class="signup-text">Already have an account? <a href="login.php">Sign In</a></p>
         </div>
         <div class="right-section">
             <div class="logo">
                 <h1>Lumin</h1>
                 <div class="owlogo">
+                    <img src="photos/orange.png" class="owlorange"> 
                     <img src="photos/blue.png" class="owl">
                 </div>
             </div>

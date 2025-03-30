@@ -14,20 +14,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-left">
-            
-            <img src="image/orange.png" alt="Logo" class="logowl">
-            <div class="logo">Lumin</div>
+<header>
+    <nav>
+        <img src="photos/orange.png" class="logowl" alt="Logo">
+        <div class="logo">Lumin</div>
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <div class="nav-right">
-            <a href="#home">Home</a>
-            <a href="#styles">Styles</a>
-            <a href="#modules">Modules</a>
-            <a href="#dashboard">Dashboard</a>
-        </div>
+        <ul id="nav-menu">
+            <li><a href="landing_logout.php">Home</a></li>
+            <li><a href="styles.php">Styles</a></li>
+            <li><a href="MODULES.php">Modules</a></li>
+            <li><a href="dashboard.php">Dashboard</a></li>
+            <li><a href="#">Log Out</a></li>    
+        </ul>
     </nav>
-
+</header>
     <div class="container">
         <div class="quiz-card"></div>
         <div class="module">
@@ -112,3 +116,16 @@
     
             <p class="view-more">View More</p>
         </section>
+    
+        <script>
+    // Toggle the visibility of the menu
+    const burger = document.getElementById('burger');
+    const navMenu = document.getElementById('nav-menu');
+
+    burger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+        <body>
+        </html>

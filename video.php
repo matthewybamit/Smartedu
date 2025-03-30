@@ -13,19 +13,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bigelow+Rules&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <img src="photos/orange.png"  class="logowl">
-            <div class="logo">Lumin</div>
-            <ul>
-               <li><a href="landing_logout.php">Home</a></li>
-                <li><a href="styles.php">Styles</a></li>
-                <li><a href="MODULES.php">Modules</a></li>
-                <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="#">Log Out</a></li>
-            </ul>
-        </nav>
-    </header>
+
+
+<header>
+    <nav>
+        <img src="photos/orange.png" class="logowl" alt="Logo">
+        <div class="logo">Lumin</div>
+        <div style="display: flex; align-items: center;">
+            <a href="styles.php" class="search">
+                <img src="photos/search.png" class="search-icon" alt="Search">
+            </a>
+            <div class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="landing_logout.php">Home</a></li>
+            <li><a href="styles.php">Styles</a></li>
+            <li><a href="MODULES.php">Modules</a></li>
+            <li><a href="dashboard.php">Dashboard</a></li>
+            <li><a href="#">Log Out</a></li>    
+        </ul>
+    </nav>
+</header>
 
     <div class="container">
         <div class="title"> Recognizing Shapes </div>
@@ -36,6 +48,16 @@
         </div>
     </div>
 
-   
+       
+    <script>
+    // Toggle the visibility of the menu
+    const burger = document.getElementById('burger');
+    const navMenu = document.getElementById('nav-menu');
+
+    burger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
 </body>
 </html>

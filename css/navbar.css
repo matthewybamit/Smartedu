@@ -44,3 +44,89 @@ nav ul li a {
     text-decoration: none;
     font-size: 16px;
 }
+
+
+.search{
+
+    display: none; 
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 20px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        z-index: 1001;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #122D64;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav {
+        position: flex;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 39px;
+        margin-bottom: 1px;
+        margin-left: 10px;
+    }
+
+    .search {
+        display: inline-block; /* Ensures the anchor is only as big as its content */
+        margin-right: 30px;    /* If you need spacing, apply it here */
+        margin-left: 140px; 
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+
+    nav ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .logowl {
+        margin-top: 1px;
+        height: 58px;
+        width: 58px;
+        margin-left: 5px;
+    }
+
+ 
+.search-icon {
+    width: 20px;
+    height: 20px;
+    display: block; /* Makes the image take only its natural dimensions */
+    /* Remove padding-left to avoid extra clickable space */
+}
+}

@@ -14,23 +14,30 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    
-    
-      <header>
-        <nav>
-             
-            <img src="photos/orange.png"  class="logowl">
-            <div class="logo">Lumin</div>
-            <ul>
-               <li><a href="landing_logout.php">Home</a></li>
-                <li><a href="styles.php">Styles</a></li>
-                <li><a href="MODULES.php">Modules</a></li>
-                <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="#">Log Out</a></li>
-            </ul>
-            
-        </nav>
-    </header>
+<header>
+    <nav>
+        <img src="photos/orange.png" class="logowl" alt="Logo">
+        <div class="logo">Lumin</div>
+        <div style="display: flex; align-items: center;">
+            <a href="styles.php" class="search">
+                <img src="photos/search.png" class="search-icon" alt="Search">
+            </a>
+            <div class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="landing_logout.php">Home</a></li>
+            <li><a href="styles.php">Styles</a></li>
+            <li><a href="MODULES.php">Modules</a></li>
+            <li><a href="dashboard.php">Dashboard</a></li>
+            <li><a href="#">Log Out</a></li>    
+        </ul>
+    </nav>
+</header>
+
     <div class="background">
         <h1 class="modules-txt">DASHBOARD</h1>
         <div class="topbox">
@@ -165,5 +172,15 @@
         });
     </script>
    
+   <script>
+    // Toggle the visibility of the menu
+    const burger = document.getElementById('burger');
+    const navMenu = document.getElementById('nav-menu');
+
+    burger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
 </body>
 </html>

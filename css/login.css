@@ -18,6 +18,22 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+    
+    /* Animation for fade-in effect */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Left Section */
@@ -30,7 +46,6 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    
 }
 
 .left-section h1 {
@@ -38,32 +53,25 @@ body {
     font-weight: 300;
     font-style: normal;
     font-size: 84px;
-    margin-bottom: 0%;
-    margin-top: 0%;
-    
+    margin: 0;
 }
 
 .owlogo {
-height: 300px;
-
-overflow: hidden;
-
+    height: 300px;
+    overflow: hidden;
 }
+
 .owl {
     margin-top: -15%;
-    
     width: 450px;
     height: auto;
     object-fit: cover;
-   
-   
 }
 
 /* Right Section */
 .right-section {
     width: 50%;
     padding: 40px;
-   
     padding-top: 6%;
     text-align: center;
 }
@@ -86,14 +94,19 @@ overflow: hidden;
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .google-signin img {
-   
     width: 18px;
     margin-right: 10px;
 }
 
+.google-signin:hover {
+    transform: scale(1.1);
+}
+
+/* Separator */
 .separator {
     display: flex;
     align-items: center;
@@ -124,7 +137,7 @@ form {
 label {
     font-size: 14px;
     margin-bottom: 5px;
-    color: #333;
+    color: #ffffff;
 }
 
 input {
@@ -134,8 +147,16 @@ input {
     background-color: #F0F1F3;
     border: 1px solid black;
     border-radius: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
+input:focus {
+    border-color: #122D64;
+    background-color: #e6eaf1;
+    transform: scale(1.05);
+}
+
+/* Sign In Button */
 .sign-in {
     margin-top: 5%;
     justify-content: center;
@@ -148,10 +169,12 @@ input {
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .sign-in:hover {
     background-color: #0a1a30;
+    transform: scale(1.1);
 }
 
 /* Sign-up Text */
@@ -164,54 +187,137 @@ input {
     color: #0d2240;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
+
+.signup-text a:hover {
+    color: #ff7f50;
+}
+
 .user {
     font-weight: 30px;
 }
+
 * {
     transition: all 0.3s ease-in-out;
 }
 
-/* Input Field Focus Effect */
-input:focus {
-    border-color: #122D64;
-    background-color: #e6eaf1;
-    transform: scale(1.05);
-}
-
-/* Button Hover Effects */
-.sign-in, .google-signin {
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.sign-in:hover, .google-signin:hover {
-    transform: scale(1.1);
-}
-
-/* Section Fade-in Effect */
-.container {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.5s forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+/* -------------------
+   RESPONSIVE STYLES
+---------------------- */
+@media screen and (max-width: 768px) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-color: #122D64;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .container {
+        background: none;      
+        box-shadow: none;     
+        border-radius: 0;     
+        width: 100%;        
+        height: auto;       
+
+      }
+    
+ 
+    .left-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 60px;
+        padding-top: 0px ;
+        padding-left: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;  
+        align-items: center;
+        z-index: 1000;
+        background-color: #122D64;  
     }
-}
+    
+    .left-section .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
 
-
-
-/* Link Hover Effect */
-.signup-text a {
-    transition: color 0.3s ease-in-out;
-}
-.signup-text a:hover {
-    color: #ff7f50;
+  
+    .left-section .owlogo {
+        order: -1;              
+        display: block;
+        margin-right: 10px;    
+        margin-left: 0;
+    }
+    
+    
+ 
+    .left-section .logo h1 {
+        font-size: 40px;
+        margin: 0;
+        color: white;
+    }
+    .owlogo{
+     
+        height: 40px;
+        width: 60px;  
+    }
+    .left-section .owlogo img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px; 
+        height: auto;
+    }
+    
+   
+    .right-section {
+        margin-top: 50px;
+        margin-left: 25px;
+        margin-right: 25px; 
+        width: 100%;
+        padding: 80px 20px 20px; 
+        box-sizing: border-box;
+    }
+    
+    .right-section h2 {
+        font-size: 25px;
+        color: #c97920;
+        margin-bottom: 30px; 
+    }
+    .separator span {
+        color: #ffffff;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+    .sign-in {
+        margin-top: 5%;
+        justify-content: center;
+        width: 50%;
+        margin-left: 25%;
+        padding: 10px;
+        background-color: #c97920;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    }
+    .signup-text {
+        margin-top: 30px;
+        color: #ffffff;
+        font-family: 'Manrope', sans-serif;
+    }
+    .signup-text a {
+        display: block;
+        margin-top: 5px;
+        color: #c97920;
+    }
 }
