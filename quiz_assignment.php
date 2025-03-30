@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Simple Website</title>
     <link rel="stylesheet" href="CSS/quiz_assignment.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -49,35 +50,39 @@
                     <button class="modulebttn"> Module</button>
                     <button class="finishedbttn">Finished</button>
                     <h2>Quiz</h2>
-                    <div class="grid_quiz">
-                        <button class="quiz_item">
-                            <img src="photos/quiz.png" alt="Button Image">
-                        </button>
-                        <button class="quiz_item">
-                            <img src="photos/quiz.png" alt="Button Image">
-                        </button>
-                        <button class="quiz_item">
-                            <img src="photos/quiz.png" alt="Button Image">
-                        </button>
-                        <button class="quiz_item">
-                            <img src="photos/quiz.png" alt="Button Image">
-                        </button>
-                        <button class="quiz_item">
-                            <img src="photos/quiz.png" alt="Button Image">
-                        </button>
-                        <button class="quiz_item">
-                            <img src="photos/quiz.png" alt="Button Image">
-                        </button>
-                        <button class="quiz_item">
-                            <img src="photos/quiz.png" alt="Button Image">
-                        </button>
-                        <button class="quiz_item">
-                            <img src="photos/quiz.png" alt="Button Image">
-                        </button>
-                    </div>  
+                    <div class="scrollpanelquiz">
+                        <div class="grid_quiz">
+                            <button class="quiz_item">
+                                <img src="photos/quiz.png" alt="Button Image">
+                            </button>
+                            <button class="quiz_item">
+                                <img src="photos/quiz.png" alt="Button Image">
+                            </button>
+                            <button class="quiz_item">
+                                <img src="photos/quiz.png" alt="Button Image">
+                            </button>
+                            <button class="quiz_item">
+                                <img src="photos/quiz.png" alt="Button Image">
+                            </button>
+                            <button class="quiz_item">
+                                <img src="photos/quiz.png" alt="Button Image">
+                            </button>
+                            <button class="quiz_item">
+                                <img src="photos/quiz.png" alt="Button Image">
+                            </button>
+                            <button class="quiz_item">
+                                <img src="photos/quiz.png" alt="Button Image">
+                            </button>
+                            <button class="quiz_item">
+                                <img src="photos/quiz.png" alt="Button Image">
+                            </button>
+                        </div>  
+                    </div>
                 </div>
+                
                 <div class="Assignments">
                     <h2>Assignment</h2>
+                <div class="scrollpanelassignment">
                     <div class="grid_assignment">
                         <button class="assignment_item">
                             <img src="photos/assignment.png" alt="Button Image">
@@ -104,8 +109,6 @@
                             <img src="photos/assignment.png" alt="Button Image">
                         </button>
                     </div>
-
-
                 </div>
 
 
