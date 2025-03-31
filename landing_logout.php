@@ -44,21 +44,21 @@
 </header>
 
 
-    <section class="hero">
+    <div class="hero">
         <div class="hero-text">
             <div class="wt">WELCOME TO</div>
-            <div class="se">SmartEdu</div>
+            <div class="se">Lumin</div>
             <div class="p1">Where Learning Becomes an Adventure!</div>
             <hr>
             <br>
-            <p> Personalized learning powered by K-means clustering and <br>
-                analytics for data-driven education.</p>
-            <button>Get Started</button>
+            <div class="parag1">  Personalized learning powered by K-means clustering and <br>
+                analytics for data-driven education.</div>
+            <button class="gt">Get Started</button>
         </div>
         <div class="hero-image">
             <img src="photos/owl1.png" alt="Owl Mascot" class="owlmascot">
         </div>
-    </section>
+</div>
     <div class="container">
         <div class="left-section">
             <div class="cy">CHOOSE YOUR <br> LEARNING STYLE</div>
@@ -82,6 +82,7 @@
             </div>
             <div class="top-p">Offers engaging videos that <br>simplify complex concepts.</div>
              </div>
+            
              <div class="bot">
             <div class="option">
                 <div class="read-icon"><img src="photos/book-half.png" class="readdd"></div>
@@ -126,15 +127,18 @@
         <div class="vmore"><div class="view-more">View More</div></div>
 
         <div class="customization-section">
-           <div class="lefty">
+           
+            <div class="lefty">
                 <div class="paragraph">Your learning experience is customized through study plans, learning techniques, study guides, and course recommendations based on your performance, learning style, and strengths. The system uses K-means clustering to group similar learners, tracks progress through quizzes and assignments, and provides real-time insights for continuous improvement.</div>
                 <div class="persobutton"><button class="personalize-btn">Personalize</button></div>
             </div>
+            
             <div class="rightright">
             <div class="mascot">
                 <div class="owlezgo"><img src="photos/lets-go 1.png" alt="Mascot" class="lezgo"></div>
             </div>
-        </div>
+            </div>
+        
         </div>
     </div>
 </div>

@@ -26,10 +26,10 @@
             </ul>
         </nav>
     </header>
-    <section class="hero">
+    <div class="hero">
         <div class="hero-text">
             <div class="wt">WELCOME TO</div>
-            <div class="se">SmartEdu</div>
+            <div class="se">Lumin</div>
             <div class="p1">Where Learning Becomes an Adventure!</div>
             <hr>
             <br>
@@ -40,7 +40,7 @@
         <div class="hero-image">
             <img src="photos/owl1.png" alt="Owl Mascot" class="owlmascot">
         </div>
-    </section>
+</div>
     <div class="container">
         <div class="left-section">
             <div class="cy">CHOOSE YOUR <br> LEARNING STYLE</div>
