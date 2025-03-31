@@ -394,3 +394,138 @@ white-space: nowrap;
     margin-right: 5px;
     border-radius: 2px;
 }
+@media screen and (max-width: 768px) {
+    /* Ensure .background expands with its content */
+    .background {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        height: auto; /* Let the container expand as needed */
+    }
+
+    /* Center the dashboard title */
+    .modules-txt {
+        position: static;
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    /* Remove absolute positioning and set a responsive width for each section */
+    .topbox,
+    .leftbox,
+    .topmid,
+    .profile-box,
+    .overall-section {
+        position: static !important;
+        width: 90%;
+        margin: 20px auto;
+        left: auto;
+        top: auto;
+        right: auto;
+        height: auto;
+    }
+
+    /* Optionally adjust inner padding if needed */
+    .topbox,
+    .leftbox,
+    .topmid,
+    .profile-box,
+    .overall-section {
+        padding: 15px;
+    }
+    .topbox {
+        position: relative;
+        width: 90%;            /* Responsive width */
+        height: auto;          /* Let content determine the height */
+        margin: 20px auto;     /* Centered with top/bottom margin */
+        background-color: #F0F1F3;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 10px;
+        padding: 15px;         /* Padding for inner spacing */
+height: 400px;
+    
+    }
+    
+    .score-section{
+        width:270px;
+        margin-top: 200px;
+        margin-left: 20px;
+    }
+
+    .progress-bars{}
+    /* Leftbox (Recent Module) adjustments */
+    .leftbox {
+        text-align: center;
+    }
+    
+    .leftbox h1 {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .scroll_leftbox {
+        width: 100%;
+        max-height: 300px;  /* Adjust max-height as needed */
+        overflow-y: auto;
+    }
+    
+    /* Topmid (Recent Activity) adjustments */
+    .topmid h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .scroll_topmid {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .grid_topmid {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .quiz {
+        width: 120px;
+        height: auto;
+    }
+    
+    /* Profile Box adjustments */
+    .profile-box {
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .profile-row {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .edit-label,
+    .value-label {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    /* Overall Section adjustments */
+    .overall-section {
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .overall-section h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .chart-labels {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}

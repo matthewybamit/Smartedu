@@ -76,6 +76,7 @@ nav ul li a {
         background-color: #122D64;
         padding: 20px;
         border-radius: 8px;
+        
     }
 
     nav ul.active {
@@ -85,6 +86,7 @@ nav ul li a {
     nav {
         position: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     .logo {
@@ -96,11 +98,12 @@ nav ul li a {
     .search {
         display: inline-block; /* Ensures the anchor is only as big as its content */
         margin-right: 30px;    /* If you need spacing, apply it here */
-        margin-left: 140px; 
+        margin-left: 0px; 
     }
 
     .burger {
         display: flex;
+        margin-right: 20px;
     }
 
     nav ul li {
@@ -128,5 +131,15 @@ nav ul li a {
     height: 20px;
     display: block; /* Makes the image take only its natural dimensions */
     /* Remove padding-left to avoid extra clickable space */
+}
+
+.burger_and_search{
+    display: flex; 
+    align-items: center;
+}
+.logo_container{
+    display: flex;
+    align-items: center;
+ 
 }
 }

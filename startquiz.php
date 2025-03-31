@@ -13,12 +13,15 @@
 </head>
 <body>
 
-
 <header>
     <nav>
+    <div class="logo_container">
         <img src="photos/orange.png" class="logowl" alt="Logo">
+
         <div class="logo">Lumin</div>
-        <div style="display: flex; align-items: center;">
+        </div>
+        <div class="burger_and_search">
+
             <a href="styles.php" class="search">
                 <img src="photos/search.png" class="search-icon" alt="Search">
             </a>
@@ -28,6 +31,7 @@
                 <div></div>
             </div>
         </div>
+
         <ul id="nav-menu">
             <li><a href="landing_logout.php">Home</a></li>
             <li><a href="styles.php">Styles</a></li>
@@ -37,6 +41,7 @@
         </ul>
     </nav>
 </header>
+
 
     <div class="container">
         <div class="quiz-card">
