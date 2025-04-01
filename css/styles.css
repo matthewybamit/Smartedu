@@ -136,3 +136,140 @@ p {
     border-radius: 10px;
    
 }
+
+@media screen and (max-width: 768px) {
+    .search-bar {
+        margin-right: 8%;
+        margin-top: 3%;
+        
+        display: flex;
+        justify-content: right;
+        
+        margin-bottom: 20px;
+        position: relative;
+        
+    }
+    .search-bar button {
+        position: absolute;
+    }
+    .search-bar input {
+        
+        width: 270px;
+        padding: 10px 30px 10px 15px;
+        
+        border: none;
+        border-radius: 15px;
+    }
+    
+    .search-bar button {
+        margin: 7px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+
+    h2 {
+        margin-left: 13%;
+        margin-top: 4%;
+        color: white;
+        font-size: 25px;
+        font-family: sans-serif;
+    }
+    .carousel-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .carousel {
+        display: flex;
+        overflow: hidden;
+        width: 79%;
+    }
+    
+    .video-item {
+        
+        
+        margin: 10px;
+        
+    }
+    
+    .video-placeholder {
+        
+        width: 240px;
+        height: 160px;
+        background: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        cursor: pointer;
+    }
+    
+    .video-placeholder span {
+        font-size: 30px;
+        color: #666;
+    }
+    
+    .next, .prev {
+        background-color: transparent;
+        border: none;
+        
+        cursor: pointer;
+        
+        
+    }
+    p {
+        font-family: sans-serif;
+        color: white;
+    }
+
+
+    .books-container {
+        margin-top: 5%;
+        margin-left: 8%;
+        margin-bottom: 4%;
+        background:#0E2A5A;
+        padding-top: 20px;
+    
+        padding-right: 50px;
+        border-radius: 15px;
+        width: 220px;
+        max-height: 640px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: orange #ccc;
+    }
+    
+    .booktitle {
+        margin-left: 5px;
+        font-size: 30px;
+        font-family: "Manrope", sans-serif;
+        color: white;
+        margin-bottom: 15px;
+        
+        
+    }
+    
+    .books-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .book-item {
+        
+        text-align: center;
+        color: white;
+    }
+    
+    .book-placeholder {
+        width: 100px;
+        height: 130px;
+        background: #EAEAEA;
+        border-radius: 10px;
+       
+    }
+}

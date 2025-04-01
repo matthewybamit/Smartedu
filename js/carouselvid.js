@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextBtn = document.querySelector(".next");
 
     let scrollAmount = 0;
-    const step = 300; 
+    const step = 260; 
 
     nextBtn.addEventListener("click", () => {
         carousel.scrollTo({
