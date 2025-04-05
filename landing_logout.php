@@ -43,7 +43,7 @@
     </nav>
 </header>
 
-
+<div class="all_container">
     <div class="hero">
         <div class="hero-text">
             <div class="wt">WELCOME TO</div>
@@ -142,6 +142,8 @@
         </div>
     </div>
 </div>
+
+
     <footer>
         <ul>
             <li><a href="#">About Us</a></li>
@@ -152,7 +154,7 @@
         </ul>
         <div class="reserve">&copy; 2025. All Rights Reserved.</div>
     </footer>
-
+</div>
 
     
 <script>

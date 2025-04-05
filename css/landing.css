@@ -360,8 +360,7 @@ p {
 
 @media screen and (max-width: 768px) {
 .owlmascot {
-    width: 0px;
-    height: 0px;
+ display: none;
 }
 .hero-image {
     background-color: black;
@@ -702,4 +701,7 @@ p {
     width: 130px; /* Adjust mascot size */
     height: auto;
 }
+
+
+
 }
