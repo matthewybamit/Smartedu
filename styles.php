@@ -54,30 +54,38 @@
         <div class="carousel-wrapper">
             <button class="prev"><img src="photos/caret-left-fill.png"></button>
             <div class="carousel">
-                <div class="video-item">
-                    <div class="video-placeholder"><span>&#9658;</span></div>
-                    <p>There are many variations of passages of Lorem Ipsum available</p>
-                </div>
-                <div class="video-item">
-                    <div class="video-placeholder"><span>&#9658;</span></div>
-                    <p>There are many variations of passages of Lorem Ipsum available</p>
-                </div>
-                <div class="video-item">
-                    <div class="video-placeholder"><span>&#9658;</span></div>
-                    <p>There are many variations of passages of Lorem Ipsum available</p>
-                </div>
-                <div class="video-item">
-                    <div class="video-placeholder"><span>&#9658;</span></div>
-                    <p>There are many variations of passages of Lorem Ipsum available</p>
-                </div>
-                <div class="video-item">
-                    <div class="video-placeholder"><span>&#9658;</span></div>
-                    <p>There are many variations of passages of Lorem Ipsum available</p>
-                </div>
-                <div class="video-item">
-                    <div class="video-placeholder"><span>&#9658;</span></div>
-                    <p>There are many variations of passages of Lorem Ipsum available</p>
-                </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/2ePf9rue1Ao" frameborder="0" allowfullscreen></iframe>
+            <p>English - Improve Your Vocabulary</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/9D05ej8u-gU" frameborder="0" allowfullscreen></iframe>
+            <p>Science - The Solar System</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/5MgBikgcWnY" frameborder="0" allowfullscreen></iframe>
+            <p>Mathematics - Algebra Basics</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/3JZ_D3ELwOQ" frameborder="0" allowfullscreen></iframe>
+            <p>History - Ancient Civilizations</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/kKKM8Y-u7ds" frameborder="0" allowfullscreen></iframe>
+            <p>Physics - Laws of Motion</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/0fKBhvDjuy0" frameborder="0" allowfullscreen></iframe>
+            <p>Chemistry - Periodic Table</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/8ZZ6GrzWkw0" frameborder="0" allowfullscreen></iframe>
+            <p>Geography - Climate Zones</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/ZK3O402wf1c" frameborder="0" allowfullscreen></iframe>
+            <p>Biology - Human Anatomy</p>
+            </div>
             </div>
             <button class="next"><img src="photos/caret-right-fill.png" alt=""></button>
         </div>
@@ -85,78 +93,52 @@
         <div class="books-container">
             <div class="booktitle">BOOKS</div>
             <div class="books-grid">
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
-                <div class="book-item">
-                    <div class="book-placeholder"></div>
-                    <p>There are many variations</p>
-                </div>
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/81zwMtN5ziL._AC_UF1000,1000_QL80_.jpg" alt="History Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>History - Ancient Civilizations</p>
             </div>
-        </div>
+            <div class="book-item">
+                <img src="https://worldscientific.com/cms/10.1142/13807/asset/190d9865-4019-d986-1401-0d9865140190/13807.cover.jpg" alt="Science Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>Science - The Wonders of Science</p>
+            </div>
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/71TOWmvvvPL._AC_UF1000,1000_QL80_.jpg" alt="Mathematics Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>Mathematics - Algebra Essentials</p>
+            </div>
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/71LM5u45AlL._AC_UF1000,1000_QL80_.jpg" alt="English Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>English - Mastering Vocabulary</p>
+            </div>
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/81kC4TNqsKL._AC_UF1000,1000_QL80_.jpg" alt="History Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>History - World Wars</p>
+            </div>
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/616iPSSOSsL._AC_UF1000,1000_QL80_.jpg" alt="Science Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>Science - Exploring Space</p>
+            </div>
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/81Wc7IlIOmL._AC_UF1000,1000_QL80_.jpg" alt="Mathematics Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>Mathematics - Geometry Basics</p>
+            </div>
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/71tOHn1AG5L.jpg" alt="English Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>English - Grammar Rules</p>
+            </div>
         
     </div>
+    </div> <!-- Closing books-container -->
+
     <footer>
-        <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms Of Service</a></li>
-            <li><a href="#">FAQs</a></li>
-            
+        <ul style="display: flex; flex-wrap: wrap; justify-content: center; padding: 0; list-style: none; margin: 20px 0;">
+            <li style="margin: 10px;"><a href="#" style="text-decoration: none; color: inherit;">About Us</a></li>
+            <li style="margin: 10px;"><a href="#" style="text-decoration: none; color: inherit;">Privacy Policy</a></li>
+            <li style="margin: 10px;"><a href="#" style="text-decoration: none; color: inherit;">Terms Of Service</a></li>
+            <li style="margin: 10px;"><a href="#" style="text-decoration: none; color: inherit;">FAQs</a></li>
         </ul>
-        <div class="reserve">&copy; 2025. All Rights Reserved.</div>
+        <div class="reserve" style="text-align: center; font-size: 14px;">&copy; 2025. All Rights Reserved.</div>
     </footer>
 
-    
     <script>
     // Toggle the visibility of the menu
     const burger = document.getElementById('burger');
@@ -165,7 +147,7 @@
     burger.addEventListener('click', () => {
         navMenu.classList.toggle('active');
     });
-</script>
+    </script>
 
-</body>
-</html>
+    </body>
+    </html>

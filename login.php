@@ -1,3 +1,7 @@
+<?php 
+include 'php_functions/login_function.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +38,7 @@
             <div class="separator">
                 <span>OR</span>
             </div>
-            <form action="#">
+            <form method="POST" action="">
                 <label for="username" class="user">Username</label>
                 <input type="text" id="username" name="username" required>
                 

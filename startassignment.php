@@ -47,7 +47,7 @@
         <div class="quiz-card">
             <div class="quiz-image"></div>
             <div class="caption">There are many variations (ito kunwari module)</div>
-            <button class="start-btn" onclick="location.href='quizone.html'">START ASSIGNMENT</button>
+            <button class="start-btn" onclick="location.href='quizone.php'">START ASSIGNMENT</button>
 
             
         </div>

@@ -48,6 +48,7 @@ header {
     background: linear-gradient(to bottom,#122D64, #82A0DC);
     color: white;
 }
+
 .modules-txt {
     position:absolute;
     text-align: center;
@@ -112,14 +113,13 @@ cursor: pointer;   /* Keeps the cursor behavior */
     border-radius: 10px;
 }
 .quiz-content h1{
-   position:absolute;
-    bottom: -40px;
-    left:-10px;
-color:white;
-font-size: 15px;
-white-space: nowrap; 
-
-
+   position: absolute;
+    bottom: -25px; /* Adjusted to center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, 50%); /* Center alignment */
+    color: white;
+    font-size: 15px;
+    white-space: nowrap; 
 }
 .grid-content {
     position:absolute;
@@ -256,14 +256,13 @@ footer ul li a {
         }
         .quiz-content h1{
             
-           position:absolute;
-            bottom: -40px;
-            left:-5px;
-        color:white;
-        font-size: 12px;
-        white-space: nowrap; 
-        
-        
+           position: absolute;
+            bottom: -25px; /* Adjusted to center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, 50%); /* Center alignment */
+            color: white;
+            font-size: 12px;
+            white-space: nowrap; 
         }
         .grid-content {
             

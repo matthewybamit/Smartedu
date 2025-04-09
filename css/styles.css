@@ -121,6 +121,7 @@ p {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 15px;
+    padding-bottom: 20px; /* Added padding at the bottom */
 }
 
 .book-item {
@@ -229,14 +230,12 @@ p {
 
     .books-container {
         margin-top: 5%;
-        margin-left: 8%;
-        margin-bottom: 4%;
-        background:#0E2A5A;
-        padding-top: 20px;
-    
-        padding-right: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20%;
+        background: #0E2A5A;
+        padding: 20px;
         border-radius: 15px;
-        width: 220px;
         max-height: 640px;
         overflow-y: auto;
         scrollbar-width: thin;
@@ -255,8 +254,8 @@ p {
     
     .books-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
     }
     
     .book-item {
@@ -271,5 +270,104 @@ p {
         background: #EAEAEA;
         border-radius: 10px;
        
+    }
+}
+
+
+
+
+@media screen and (min-width: 820px) and (max-width: 1366px) {
+    .search-bar {
+        margin-right: 5%;
+        margin-top: 2%;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 25px;
+        position: relative;
+    }
+
+    .search-bar input {
+        width: 460px;
+        padding: 14px 45px 14px 20px;
+        border: none;
+        border-radius: 15px;
+        font-size: 16px;
+    }
+
+    .search-bar button {
+        position: absolute;
+        right: 10px;
+        top: 34%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    h2 {
+        margin-left: 5%;
+        margin-top: 3%;
+        color: white;
+        font-size: 32px;
+        font-family: sans-serif;
+    }
+
+    .carousel-wrapper {
+        justify-content: center;
+    }
+
+    .carousel {
+        width: 85%;
+    }
+
+    .video-placeholder {
+        width: 300px;
+        height: 200px;
+    }
+
+    .video-placeholder span {
+        font-size: 34px;
+    }
+
+    .books-container {
+        margin: 4% auto 8%;
+        background: #0E2A5A;
+        padding: 30px;
+        border-radius: 20px;
+        width: 70%;
+        max-height: 750px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: orange #ccc;
+    }
+
+    .booktitle {
+        font-size: 34px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+    }
+
+    .book-item {
+        text-align: center;
+        color: white;
+    }
+
+    .book-placeholder {
+        width: 140px;
+        height: 180px;
+        background: #EAEAEA;
+        border-radius: 10px;
+    }
+
+    
+
+
+    p {
+        font-size: 18px;
     }
 }

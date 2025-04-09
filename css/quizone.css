@@ -11,12 +11,14 @@ body {
 
 
 .container {
-    background: linear-gradient(to bottom, #122D64, #82A0DC 90%);
-    padding-top: 10px;
+    padding-bottom: 2%;
+    width: 100%;
+    min-height: 100vh; /* Ensures it covers at least the full viewport height */
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 90vh;
+    background: linear-gradient(to bottom, #122D64, #82A0DC);
+    color: white;
+    position: relative; /* Keeps it positioned without affecting scrollbars */
 }
 
 .quiz-card {

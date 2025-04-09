@@ -1,5 +1,21 @@
+<?php
+include_once 'php_functions/module_function.php';  // Include the function to fetch title and description
+include_once 'php_functions/db_connection.php';  // Include the database connection file
+
+// Fetch both title and description
+$moduleDetails = getEnglishModuleDetails($conn);
+
+// Extract title and description from the result
+$title = $moduleDetails['title'];
+$description = $moduleDetails['description'];
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,99 +23,95 @@
     <link rel="stylesheet" href="CSS/read.css">
     <link rel="stylesheet" href="css/navbar.css">
 </head>
+
 <body>
-    
-<header>
-    <nav>
-    <div class="logo_container">
-        <img src="photos/orange.png" class="logowl" alt="Logo">
 
-        <div class="logo">Lumin</div>
-        </div>
-        <div class="burger_and_search">
+    <header>
+        <nav>
+            <div class="logo_container">
+                <img src="photos/orange.png" class="logowl" alt="Logo">
 
-            <a href="styles.php" class="search">
-                <img src="photos/search.png" class="search-icon" alt="Search">
-            </a>
-            <div class="burger" id="burger">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="logo">Lumin</div>
             </div>
-        </div>
+            <div class="burger_and_search">
 
-        <ul id="nav-menu">
-            <li><a href="landing_logout.php">Home</a></li>
-            <li><a href="styles.php">Styles</a></li>
-            <li><a href="MODULES.php">Modules</a></li>
-            <li><a href="dashboard.php">Dashboard</a></li>
-            <li><a href="#">Log Out</a></li>    
-        </ul>
-    </nav>
-</header>
+                <a href="styles.php" class="search">
+                    <img src="photos/search.png" class="search-icon" alt="Search">
+                </a>
+                <div class="burger" id="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <ul id="nav-menu">
+                <li><a href="landing_logout.php">Home</a></li>
+                <li><a href="styles.php">Styles</a></li>
+                <li><a href="MODULES.php">Modules</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
-    
+
     <main>
-        
+
         <div class="background">
             <div class="readFrame">
                 <div class="chapters">
                     <H1>Chapters</H1>
                     <div class="scroll-chapters">
                         <div class="grid-grid">
-                        <div class="grid-num">
-                            <h2>01</h2>
-                            <h2>02</h2>
-                            <h2>03</h2>
-                            <h2>04</h2>
-                            <h2>05</h2>
-                            <h2>06</h2>
-                            <h2>07</h2>
-                            <h2>08</h2>
-                            <h2>09</h2>
-                        </div>
-                        <div class="grid-title">
-                            <h3>Title</h3>
-                            <h3>Title</h3>
-                            <h3>Title</h3>
-                            <h3>Title</h3>
-                            <h3>Title</h3>
-                            <h3>Title</h3>
-                            <h3>Title</h3>
-                            <h3>Title</h3>
-                            <h3>Title</h3>
-                        </div>
+                            <div class="grid-num">
+                                <h2>01</h2>
+                                <h2>02</h2>
+                                <h2>03</h2>
+                                <h2>04</h2>
+                                <h2>05</h2>
+                                <h2>06</h2>
+                                <h2>07</h2>
+                                <h2>08</h2>
+                                <h2>09</h2>
+                            </div>
+                            <div class="grid-title">
+                                <h3><?php echo htmlspecialchars($title); ?></h3>
+                                <h3>Title</h3>
+                                <h3>Title</h3>
+                                <h3>Title</h3>
+                                <h3>Title</h3>
+                                <h3>Title</h3>
+                                <h3>Title</h3>
+                                <h3>Title</h3>
+                                <h3>Title</h3>
+                            </div>
                         </div>
                     </div>
 
                 </div>
                 <div class="readcontent">
-                    
+
                     <button class="save">Save</button>
                     <button class="finish">Finished</button>
-                    <button class="start">Start Quiz</button>
+                    <button class="start" onclick="location.href='quizone.php';">Start Quiz</button>
+
                     <div class="scroll-read">
-                    <h2>01</h2>
-                    <h1>Title</h1>
-                    <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Tempus consectetur et nascetur convallis a platea netus. Taciti odio lectus cras sem posuere est, sollicitudin primis ad. Cras gravida sapien odio vivamus nec eget. Malesuada lacinia eu tortor at ullamcorper. Risus cras amet aliquet; efficitur consectetur imperdiet lorem semper ridiculus. Mi augue ultricies posuere auctor class lectus ut nibh parturient.
-                        <br>
-                    Duis lectus volutpat maecenas pellentesque nisi eget inceptos montes. Felis fermentum tempor justo maximus, magnis quam sit. Felis montes habitant ad tincidunt urna maecenas urna malesuada leo. Urna quisque risus venenatis tellus, hendrerit vestibulum. Hac congue tristique nam imperdiet maximus ante. Porta fermentum eros nascetur ultricies odio fringilla. Pretium fermentum pulvinar suspendisse gravida leo nibh tristique tristique dui. Iaculis quisque efficitur ornare maximus, montes fusce sagittis ex. Mi ac dis dolor nisl; lacinia tincidunt luctus.
-                        <br>
-                    Mus metus ullamcorper maximus, pellentesque fringilla dapibus. Lectus quis dolor cubilia metus dis. Posuere hac phasellus tempor tempus enim diam porta habitant. Venenatis consequat suspendisse facilisis quam pretium metus. Porttitor quis quis sodales tellus sodales elit aenean turpis egestas. Mattis fringilla massa fermentum ipsum, nullam cras. Posuere dapibus ridiculus ut sed potenti ad urna nibh. Ultrices ligula convallis nec gravida sagittis arcu.
-                        <br>
-                    At blandit nibh ultrices dis eleifend ultrices. Nibh finibus habitant nibh cras sed aptent. Molestie nisi velit vel urna proin non pulvinar torquent convallis. Magnis pretium penatibus imperdiet bibendum penatibus mollis proin. Curabitur efficitur per montes, auctor leo sagittis. Non cubilia eros nostra magna at dignissim bibendum. Primis vitae hac dolor conubia gravida porta efficitur sit. Bibendum nascetur amet justo; velit feugiat interdum mollis mus.
-                        <br>
-                    Mollis ullamcorper ultrices eget nullam feugiat tristique. Enim nunc pulvinar conubia lobortis condimentum. Facilisi euismod curae duis lacinia maximus risus urna. Hac dignissim taciti cras tincidunt hac lectus finibus orci tristique. Porta rhoncus sed libero penatibus sagittis felis ornare lectus sem. Odio ac ultricies ridiculus commodo leo a phasellus pellentesque. Adipiscing rutrum class himenaeos ligula nisl suspendisse tempor gravida.
-                    </p>
+                        <h2>01</h2>
+                        <h1><?php echo htmlspecialchars($title); ?></h1> <!-- Display the title -->
+
+                        <!-- Display the description fetched from the database -->
+                        <p><?php echo htmlspecialchars($description); ?></p> <!-- Display the description -->
                     </div>
                 </div>
-                
-                    <div class="content">
+
+                <div class="content">
                     <h1></h1>
-                    <h2></h2><h3></h3>
-                    
-                    </div>
+                    <h2></h2>
+                    <h3></h3>
+
+                </div>
 
 
 
@@ -108,21 +120,22 @@
         </div>
     </main>
     <footer>
-       
+
     </footer>
-    
+
     <script src="scripts.js"></script>
 
-        
-    <script>
-    // Toggle the visibility of the menu
-    const burger = document.getElementById('burger');
-    const navMenu = document.getElementById('nav-menu');
 
-    burger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
-</script>
+    <script>
+        // Toggle the visibility of the menu
+        const burger = document.getElementById('burger');
+        const navMenu = document.getElementById('nav-menu');
+
+        burger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 
 </body>
+
 </html>
