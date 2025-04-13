@@ -34,11 +34,11 @@
         </div>
 
         <ul id="nav-menu">
-            <li><a href="landing_logout.php">Home</a></li>
+            <li><a href="landing_page.php">Home</a></li>
             <li><a href="styles.php">Styles</a></li>
             <li><a href="MODULES.php">Modules</a></li>
             <li><a href="dashboard.php">Dashboard</a></li>
-            <li><a href="#">Log Out</a></li>    
+            <li><a href="php_functions/logout.php">Log Out</a></li>
         </ul>
     </nav>
 </header>

@@ -201,6 +201,7 @@ button {
     color: black;
 }
 .vid, .rid {
+    background-color: white;
     font-family: "Manrope", sans-serif;
     font-weight: bold;
 }

@@ -21,12 +21,12 @@ include 'php_functions/signup_function.php';
           
             <form action="" method="post">
                 <label for="firstname" class="fname">First Name</label>
-                <input type="text" id="fname" name="fname" required>
+                <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
 
                 <div class="row"> 
                     <div class="column">
                         <label for="lastname" class="lname">Last Name</label>
-                        <input type="text" id="lname" name="lname" required>
+                        <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
                     </div>
             
                     <div class="column">
@@ -35,14 +35,14 @@ include 'php_functions/signup_function.php';
                     </div>
                 </div>
 
-                <label for="password" class="pass">Email</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email" class="pass">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
                 <label for="username" class="user">Username</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required>
                 
                 <label for="password" class="pass">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
                 
                 <button type="submit" class="sign-in">Sign Up</button>
             </form>

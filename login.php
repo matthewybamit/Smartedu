@@ -1,4 +1,9 @@
 <?php 
+session_start();
+if (isset($_SESSION['user_id'])) {
+    header("Location: landing_page.php"); // Redirect to landing page if already logged in
+    exit();
+}
 include 'php_functions/login_function.php';
 ?>
 
@@ -40,10 +45,10 @@ include 'php_functions/login_function.php';
             </div>
             <form method="POST" action="">
                 <label for="username" class="user">Username</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
                 
                 <label for="password" class="pass">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 
                 <button type="submit" class="sign-in">Sign In</button>
             </form>

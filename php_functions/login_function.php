@@ -1,5 +1,8 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start(); // Start a session only if one is not already active
+}
+
 include 'db_connection.php'; // Include your database connection
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -21,8 +24,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
 
+            // Combine first_name and last_name for full_name session
+            if (!empty($user['first_name']) && !empty($user['last_name'])) {
+                $_SESSION['full_name'] = $user['first_name'] . ' ' . $user['last_name'];
+            } else {
+                $_SESSION['full_name'] = null; // Ensure no "Guest" is stored
+            }
+
             // Redirect to home page after successful login
-            header("Location: landing_logout.php");
+            header("Location: landing_page.php");
             exit();
         } else {
             $_SESSION['message'] = 'Invalid password!';

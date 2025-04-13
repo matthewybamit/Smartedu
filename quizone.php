@@ -1,3 +1,86 @@
+<?php
+session_start();
+include_once 'php_functions/db_connection.php';
+
+$subject = isset($_SESSION['subject']) ? $_SESSION['subject'] : null;
+
+if ($subject === 'history') {
+    $tableName = 'quiz_history';
+} elseif ($subject === 'english') {
+    $tableName = 'quiz_english';
+} else {
+    die("Invalid subject or no subject selected.");
+}
+
+// Fetch all questions from the database
+$query = $conn->prepare("SELECT id, quiz_title, question, choice_a, choice_b, choice_c, choice_d, correct_choice FROM $tableName ORDER BY id ASC");
+$query->execute();
+$questions = $query->fetchAll(PDO::FETCH_ASSOC);
+
+// Initialize or update the current question index
+if (!isset($_SESSION['current_question'])) {
+    $_SESSION['current_question'] = 0;
+    $_SESSION['score'] = 0; // Ensure score is initialized
+} else {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $currentQuestion = $questions[$_SESSION['current_question']];
+        $userAnswer = $_POST['answer'] ?? null;
+
+        // Check if the answer is correct
+        if ($userAnswer === $currentQuestion['correct_choice']) {
+            $_SESSION['score']++;
+        }
+
+        // Move to the next question
+        $_SESSION['current_question']++;
+    }
+}
+
+// Check if the quiz is finished
+if ($_SESSION['current_question'] >= count($questions)) {
+    $totalQuestions = count($questions); // Ensure total questions are counted correctly
+    $score = $_SESSION['score'] ?? 0; // Ensure score is not null
+    $username = $_SESSION['username']; // Get the username from the session
+
+    // Fetch first_name and last_name from the database
+    $query = $conn->prepare("SELECT first_name, last_name FROM users WHERE username = :username");
+    $query->bindParam(':username', $username);
+    $query->execute();
+    $user = $query->fetch(PDO::FETCH_ASSOC);
+
+    // Combine first_name and last_name, ensure no invalid names are stored
+    $fullName = ($user && !empty($user['first_name']) && !empty($user['last_name']) && $user['first_name'] !== 'Guest') 
+        ? $user['first_name'] . ' ' . $user['last_name'] 
+        : null;
+
+    // Check if the user has already submitted the quiz
+    $checkQuery = $conn->prepare("SELECT COUNT(*) FROM results WHERE name = :name AND total_item = :total_item");
+    $checkQuery->bindParam(':name', $fullName);
+    $checkQuery->bindParam(':total_item', $totalQuestions);
+    $checkQuery->execute();
+    $alreadySubmitted = $checkQuery->fetchColumn();
+
+    if (!$alreadySubmitted && !empty($fullName)) { // Only insert if not already submitted and fullName is valid
+        // Store the result in the database
+        $insertQuery = $conn->prepare("INSERT INTO results (name, total_score, total_item) VALUES (:name, :total_score, :total_item)");
+        $insertQuery->bindParam(':name', $fullName);
+        $insertQuery->bindParam(':total_score', $score);
+        $insertQuery->bindParam(':total_item', $totalQuestions);
+        $insertQuery->execute();
+    }
+
+    // Set total in session
+    $_SESSION['total'] = $totalQuestions;
+
+    // Redirect to result page
+    header("Location: result.php");
+    exit();
+}
+
+// Get the current question
+$currentQuestion = $questions[$_SESSION['current_question']];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,23 +89,31 @@
     <title>Quiz Page</title>
     <link rel="stylesheet" href="css/quizone.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bigelow+Rules&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function submitAnswer(answer) {
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.style.display = 'none';
+
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'answer';
+            input.value = answer;
+
+            form.appendChild(input);
+            document.body.appendChild(form);
+            form.submit();
+        }
+    </script>
 </head>
 <body>
-
 <header>
     <nav>
-    <div class="logo_container">
-        <img src="photos/orange.png" class="logowl" alt="Logo">
-
-        <div class="logo">Lumin</div>
+        <div class="logo_container">
+            <img src="photos/orange.png" class="logowl" alt="Logo">
+            <div class="logo">Lumin</div>
         </div>
         <div class="burger_and_search">
-
             <a href="styles.php" class="search">
                 <img src="photos/search.png" class="search-icon" alt="Search">
             </a>
@@ -32,42 +123,44 @@
                 <div></div>
             </div>
         </div>
-
         <ul id="nav-menu">
-            <li><a href="landing_logout.php">Home</a></li>
+            <li><a href="landing_page.php">Home</a></li>
             <li><a href="styles.php">Styles</a></li>
             <li><a href="MODULES.php">Modules</a></li>
             <li><a href="dashboard.php">Dashboard</a></li>
-            <li><a href="#">Log Out</a></li>    
+            <li><a href="php_functions/logout.php">Log Out</a></li>
         </ul>
     </nav>
 </header>
 
-
-    <div class="container">
-        <div class="quiz-card">
-            <div class="quiz-progress">4/10
-    <div class="quiz-question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum tincidunt lectus, at varius augue sollicitudin in.
-    </div>
-    <div class="quiz-options">
-        <button class="quiz-option">A. bisbisis</button>
-        <button class="quiz-option">B. avavas</button>
-        <button class="quiz-option">C. iwiww</button>
-        <button class="quiz-option">D. daixiait</button>
-    </div>
-    <div class="quiz-navigation">
-        <button class="nav-btn left-btn"></button>
-        <div class="circle-check">
-            <i class="fas fa-check"></i>
+<div class="container">
+    <div class="quiz-card">
+        <div class="quiz-title">
+            <?php echo htmlspecialchars($currentQuestion['quiz_title']); ?>
         </div>
-        <button class="nav-btn right-btn"></button>
+        <div class="quiz-progress">
+            Question <?php echo $_SESSION['current_question'] + 1; ?> of <?php echo count($questions); ?>
+        </div>
+        <div class="quiz-question">
+            <?php echo htmlspecialchars($currentQuestion['question']); ?>
+        </div>
+        <div class="quiz-options">
+            <button class="quiz-option" onclick="submitAnswer('A')">
+                <?php echo htmlspecialchars($currentQuestion['choice_a']); ?>
+            </button>
+            <button class="quiz-option" onclick="submitAnswer('B')">
+                <?php echo htmlspecialchars($currentQuestion['choice_b']); ?>
+            </button>
+            <button class="quiz-option" onclick="submitAnswer('C')">
+                <?php echo htmlspecialchars($currentQuestion['choice_c']); ?>
+            </button>
+            <button class="quiz-option" onclick="submitAnswer('D')">
+                <?php echo htmlspecialchars($currentQuestion['choice_d']); ?>
+            </button>
+        </div>
     </div>
-    </div>
-</div>
 </div>
 
-<script src="js/quizone.js"></script>
-    
 <script>
     // Toggle the visibility of the menu
     const burger = document.getElementById('burger');
@@ -77,7 +170,5 @@
         navMenu.classList.toggle('active');
     });
 </script>
-
 </body>
 </html>
-          

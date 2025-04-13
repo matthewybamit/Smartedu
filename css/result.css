@@ -1,0 +1,88 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    background: linear-gradient(to bottom, #122D64, #82A0DC);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.result-container {
+    background: linear-gradient(to bottom, #ffffff, #f0f1f3);
+    color: #122D64;
+    border-radius: 20px;
+    width: 450px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.result-container h1 {
+    font-size: 2.8em;
+    margin-bottom: 25px;
+    color: #007bff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.result-container p {
+    font-size: 1.3em;
+    margin-bottom: 35px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.result-container button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.result-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.result-container .score-box {
+    background: linear-gradient(to bottom, #f9f9f9, #e6e6e6);
+    color: #333;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    animation: popIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

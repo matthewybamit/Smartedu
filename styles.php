@@ -35,11 +35,11 @@
         </div>
 
         <ul id="nav-menu">
-            <li><a href="landing_logout.php">Home</a></li>
+            <li><a href="landing_page.php">Home</a></li>
             <li><a href="styles.php">Styles</a></li>
             <li><a href="MODULES.php">Modules</a></li>
             <li><a href="dashboard.php">Dashboard</a></li>
-            <li><a href="#">Log Out</a></li>    
+            <li><a href="php_functions/logout.php">Log Out</a></li>
         </ul>
     </nav>
 </header>
@@ -55,36 +55,92 @@
             <button class="prev"><img src="photos/caret-left-fill.png"></button>
             <div class="carousel">
             <div class="video-item">
-            <iframe width="300" height="200" src="https://www.youtube.com/embed/2ePf9rue1Ao" frameborder="0" allowfullscreen></iframe>
-            <p>English - Improve Your Vocabulary</p>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/6LFjVC3cHjI" title="Basic English grammar explained || English Grammar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Basic English grammar explained || English Grammar</p>
             </div>
             <div class="video-item">
             <iframe width="300" height="200" src="https://www.youtube.com/embed/9D05ej8u-gU" frameborder="0" allowfullscreen></iframe>
             <p>Science - The Solar System</p>
             </div>
             <div class="video-item">
-            <iframe width="300" height="200" src="https://www.youtube.com/embed/5MgBikgcWnY" frameborder="0" allowfullscreen></iframe>
-            <p>Mathematics - Algebra Basics</p>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/TR0JZiapxXM" title="50+ Advanced Phrases For English Conversations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>50+ Advanced Phrases For English Conversations</p>
             </div>
             <div class="video-item">
-            <iframe width="300" height="200" src="https://www.youtube.com/embed/3JZ_D3ELwOQ" frameborder="0" allowfullscreen></iframe>
-            <p>History - Ancient Civilizations</p>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/u0cjcomXtd4" title="21 Advanced Phrases (C1) to Build Your Vocabulary | Advanced English" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>21 Advanced Phrases (C1) to Build Your Vocabulary | Advanced English</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/oXVDzDGSyz0?list=PL_Zjf61X10RJJ0u47o-TR0IpEEAJ27QPC" title="Formal Vs Informal English: Greetings and Responses" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Formal Vs Informal English: Greetings and Responses</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/0wuDtGpBUlg" title="Journey Through Time: A Look Into Pre-Colonial Philippines" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Journey Through Time: A Look Into Pre-Colonial Philippines</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/QEm4iNV1Mq8" title="Pre-colonial Philippines &amp; Things you might not know about our history | Our Philippines" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Pre Colonial Philippines explained in 2 minutes</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/SVSGMrOgCRA" title="Pre Colonial Philippines explained in 2 minutes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Pre Colonial Philippines explained in 2 minutes</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/8HBG8LqcHBM" title="UNVEILING THE PRE COLONIAL PHILIPPINES" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>UNVEILING THE PRE COLONIAL PHILIPPINES</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/aKZ6h7MgZXw" frameborder="0" allowfullscreen></iframe>
+            <p>The History of The Philippines Before Magellan (3000 BCE - 1521 CE)</p>
             </div>
             <div class="video-item">
             <iframe width="300" height="200" src="https://www.youtube.com/embed/kKKM8Y-u7ds" frameborder="0" allowfullscreen></iframe>
             <p>Physics - Laws of Motion</p>
             </div>
             <div class="video-item">
-            <iframe width="300" height="200" src="https://www.youtube.com/embed/0fKBhvDjuy0" frameborder="0" allowfullscreen></iframe>
-            <p>Chemistry - Periodic Table</p>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/JlyVCU4zZCE" frameborder="0" allowfullscreen></iframe>
+            <p>Pre-Colonial Philippines through the account of Antonio Pigafetta</p>
             </div>
             <div class="video-item">
-            <iframe width="300" height="200" src="https://www.youtube.com/embed/8ZZ6GrzWkw0" frameborder="0" allowfullscreen></iframe>
-            <p>Geography - Climate Zones</p>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/tTomwopxKFE" title="Algebra 1  Basics for Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Algebra 1  Basics for Beginners</p>
             </div>
             <div class="video-item">
-            <iframe width="300" height="200" src="https://www.youtube.com/embed/ZK3O402wf1c" frameborder="0" allowfullscreen></iframe>
-            <p>Biology - Human Anatomy</p>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/BZ4FjSXjzgg" title="Math - Addition | Basic Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Math - Addition | Basic Introduction</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/yAJxHO7CLh4" title="Basic Division Explained!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Basic Division Explained!</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/GKetIwxaenA" title="Math - Long Multiplication" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Math - Long Multiplication</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/r3qKojj4g4g" title="Subtraction - Math | Basic Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Subtraction - Math | Basic Introduction</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/WsQQvHm4lSw" title="Understand Calculus in 35 Minutes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
+            <p>Understand Calculus in 35 Minutes</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/5iTOphGnCtg" title="GENERAL CHEMISTRY explained in 19 Minutes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>GENERAL CHEMISTRY explained in 19 Minutes</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/3tisOnOkwzo" title="BIOLOGY explained in 17 Minutes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>BIOLOGY explained in 17 Minutes</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/Ae4MadKPJC0" title="Human Body 101 | National Geographic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Human Body 101 | National Geographic</p>
+            </div>
+            <div class="video-item">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/u6_wBEdQFf4" title="Five Hours Of Mind-Blowing Solar System Exploration | BBC Earth Science" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Five Hours Of Mind-Blowing Solar System Exploration | BBC Earth Science</p>
             </div>
             </div>
             <button class="next"><img src="photos/caret-right-fill.png" alt=""></button>
@@ -93,6 +149,30 @@
         <div class="books-container">
             <div class="booktitle">BOOKS</div>
             <div class="books-grid">
+            <div class="book-item">
+                <img src="photos/History of Asia.png" alt="History Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>History of Asia</p>
+            </div>
+            <div class="book-item">
+                <img src="photos/Austronesian and Polynesian.png" alt="History Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>Austronesian and Polynesian</p>
+            </div>
+            <div class="book-item">
+                <img src="photos/Philippines under Japanese Empire.png" alt="History Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>Philippines under Japanese Empire</p>
+            </div>
+            <div class="book-item">
+                <img src="photos/Philippines under Marcos dictatorship.png" alt="History Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>Philippines under Marcos dictatorship</p>
+            </div>
+            <div class="book-item">
+                <img src="photos/Philippines under Spanish Empire.png" alt="History Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>Philippines under Spanish Empire</p>
+            </div>
+            <div class="book-item">
+                <img src="photos/Pre-colonial Philippines.png" alt="History Book Cover" class="book-cover" style="width: 150px; height: 200px;">
+                <p>Pre-colonial Philippines</p>
+            </div>
             <div class="book-item">
                 <img src="https://m.media-amazon.com/images/I/81zwMtN5ziL._AC_UF1000,1000_QL80_.jpg" alt="History Book Cover" class="book-cover" style="width: 150px; height: 200px;">
                 <p>History - Ancient Civilizations</p>

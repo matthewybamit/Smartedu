@@ -46,11 +46,11 @@ $description = $moduleDetails['description'];
             </div>
 
             <ul id="nav-menu">
-                <li><a href="landing_logout.php">Home</a></li>
+                <li><a href="landing_page.php">Home</a></li>
                 <li><a href="styles.php">Styles</a></li>
                 <li><a href="MODULES.php">Modules</a></li>
                 <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="#">Log Out</a></li>
+                <li><a href="php_functions/logout.php">Log Out</a></li>
             </ul>
         </nav>
     </header>
@@ -61,36 +61,7 @@ $description = $moduleDetails['description'];
 
         <div class="background">
             <div class="readFrame">
-                <div class="chapters">
-                    <H1>Chapters</H1>
-                    <div class="scroll-chapters">
-                        <div class="grid-grid">
-                            <div class="grid-num">
-                                <h2>01</h2>
-                                <h2>02</h2>
-                                <h2>03</h2>
-                                <h2>04</h2>
-                                <h2>05</h2>
-                                <h2>06</h2>
-                                <h2>07</h2>
-                                <h2>08</h2>
-                                <h2>09</h2>
-                            </div>
-                            <div class="grid-title">
-                                <h3><?php echo htmlspecialchars($title); ?></h3>
-                                <h3>Title</h3>
-                                <h3>Title</h3>
-                                <h3>Title</h3>
-                                <h3>Title</h3>
-                                <h3>Title</h3>
-                                <h3>Title</h3>
-                                <h3>Title</h3>
-                                <h3>Title</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                
                 <div class="readcontent">
 
                     <button class="save">Save</button>
