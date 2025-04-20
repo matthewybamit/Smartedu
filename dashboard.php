@@ -20,17 +20,43 @@ include 'php_functions/db_connection.php'; // Ensure database connection is incl
 session_start();
 $userId = $_SESSION['user_id']; // Assuming user_id is stored in session during login
 
-// Fetch user details from the database
-$query = $conn->prepare("SELECT first_name, last_name, age, profile_pic, email, username FROM users WHERE id = :id");
-$query->bindParam(':id', $userId);
+// Check if the user logged in with Google
+$query = $conn->prepare("SELECT name, email, profile_picture FROM google_account WHERE user_id = :user_id");
+$query->bindParam(':user_id', $userId);
 $query->execute();
 
-$user = $query->fetch(PDO::FETCH_ASSOC);
-$fullName = $user ? $user['first_name'] . ' ' . $user['last_name'] : 'Guest';
-$age = $user ? $user['age'] : 'N/A';
-$profilePicture = $user && !empty($user['profile_pic']) 
-    ? $user['profile_pic'] 
-    : 'https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small_2x/default-avatar-icon-of-social-media-user-vector.jpg';
+$googleUser = $query->fetch(PDO::FETCH_ASSOC);
+
+if ($googleUser) {
+    $fullName = $googleUser['name'];
+    $profilePicture = $googleUser['profile_picture'];
+    $email = $googleUser['email'];
+    $age = $googleUser['age'] ?? 'N/A';
+} else {
+    // Fetch user details from the `users` table for non-Google users
+    $query = $conn->prepare("SELECT first_name, last_name, age, profile_pic, email, username FROM users WHERE id = :id");
+    $query->bindParam(':id', $userId);
+    $query->execute();
+
+    $user = $query->fetch(PDO::FETCH_ASSOC);
+    $fullName = $user ? $user['first_name'] . ' ' . $user['last_name'] : 'Guest';
+    $profilePicture = $user && !empty($user['profile_pic']) 
+        ? $user['profile_pic'] 
+        : 'https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small_2x/default-avatar-icon-of-social-media-user-vector.jpg';
+    $email = $user['email'] ?? 'N/A';
+    $age = $user['age'] ?? 'N/A';
+}
+
+// Fetch the most recent modules accessed by the user
+$recentModulesQuery = $conn->prepare("
+    SELECT modules_pic 
+    FROM recent_modules 
+    WHERE username = :username 
+
+");
+$recentModulesQuery->bindParam(':username', $_SESSION['username']);
+$recentModulesQuery->execute();
+$recentModules = $recentModulesQuery->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <header>
     <nav>
@@ -112,42 +138,9 @@ $profilePicture = $user && !empty($user['profile_pic'])
                 });
             </script>
 
-            <style>
-                .profile-picture-container {
-                    text-align: left; /* Align to the left */
-                    margin-top: 13px;
-                }
-
-                .profile-picture {
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 50%;
-                    overflow: hidden;
-                }
-
-                .circle-image {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-
-                .change-profile-btn {
-                    margin-top: 10px;
-                    padding: 8px 16px;
-                    background-color: #007bff;
-                    color: white;
-                    border: none;
-                    border-radius: 4px;
-                    cursor: pointer;
-                }
-
-                .change-profile-btn:hover {
-                    background-color: #0056b3;
-                }
-            </style>
             <div class="info">
-                <h3 class="name1" id="userName">Name: <?php echo htmlspecialchars($fullName); ?></h3> <!-- Display full name -->
-                <h3 class="age2" id="age">Age: <?php echo htmlspecialchars($age); ?> years old</h3> <!-- Display age -->
+                <h3 class="name1" id="userName">Name: <?php echo htmlspecialchars($fullName); ?></h3>
+                <h3 class="age2" id="age">Age: <?php echo htmlspecialchars($age); ?> </h3>
             </div>
 
             <div class="score-section">
@@ -175,21 +168,13 @@ $profilePicture = $user && !empty($user['profile_pic'])
         <div class="leftbox">
             <h1>Recent Module</h1>
             <div class="scroll_leftbox">
-                <div class="leftbox_grid">  
-                    <div class="recent_module">
-                        <h1>There are many variations</h1>
-                    </div>
-                    <div class="recent_module">
-                        <h1>There are many variations</h1>
-                    </div>
-                    <div class="recent_module">
-                        <h1>There are many variations</h1>
-                    </div>
-                    <div class="recent_module">
-                        <h1>There are many variations</h1>
-                    </div>
+                <div class="leftbox_grid">
+                    <?php foreach ($recentModules as $module): ?>
+                        <div class="recent_module">
+                            <img src="<?php echo htmlspecialchars($module['modules_pic']); ?>" alt="Module Image" style="width: 100%; height: auto; border-radius: 10px;">
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-                
             </div>
         </div>
         <div class="topmid">
@@ -211,12 +196,12 @@ $profilePicture = $user && !empty($user['profile_pic'])
         <span class="value-label" id="displayName"><?php echo htmlspecialchars($fullName); ?></span>
     </div>
     <div class="profile-row">
-        <a href="#" class="edit-label" onclick="openModal('email', '<?php echo htmlspecialchars($user['email']); ?>')">Edit Email</a>
-        <span class="value-label" id="displayEmail"><?php echo htmlspecialchars($user['email']); ?></span>
+        <a href="#" class="edit-label" onclick="openModal('email', '<?php echo htmlspecialchars($email); ?>')">Edit Email</a>
+        <span class="value-label" id="displayEmail"><?php echo htmlspecialchars($email); ?></span>
     </div>
     <div class="profile-row">
-        <a href="#" class="edit-label" onclick="openModal('username', '<?php echo htmlspecialchars($user['username']); ?>')">Edit Username</a>
-        <span class="value-label" id="displayUsername"><?php echo htmlspecialchars($user['username']); ?></span>
+    <a href="#" class="edit-label" onclick="openModal('username', '<?php echo htmlspecialchars($user['username'] ?? 'N/A'); ?>')">Edit Username</a>
+    <span class="value-label" id="displayUsername"><?php echo htmlspecialchars($user['username'] ?? 'N/A'); ?></span>
     </div>
     <div class="profile-row">
         <a href="#" class="edit-label" onclick="openModal('password', '')">Edit Password</a>
@@ -244,8 +229,8 @@ $profilePicture = $user && !empty($user['profile_pic'])
         currentField = field;
         document.getElementById('modalTitle').innerText = `Edit ${field.charAt(0).toUpperCase() + field.slice(1)}`;
         const input = document.getElementById('modalInput');
-        input.value = currentField === 'password' ? '' : currentValue;
-        input.type = currentField === 'password' ? 'password' : 'text';
+        input.value = currentValue;
+        input.type = 'text';
         document.getElementById('editModal').style.display = 'block';
     }
 
@@ -268,11 +253,8 @@ $profilePicture = $user && !empty($user['profile_pic'])
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    if (currentField !== 'password') {
-                        document.getElementById(`display${currentField.charAt(0).toUpperCase() + currentField.slice(1)}`).innerText = newValue;
-                    }
                     alert(`${currentField.charAt(0).toUpperCase() + currentField.slice(1)} updated successfully.`);
-                    closeModal();
+                    window.location.reload(); // Refresh the page after successful update
                 } else {
                     alert('Failed to update. Please try again.');
                 }
@@ -284,77 +266,6 @@ $profilePicture = $user && !empty($user['profile_pic'])
         }
     }
 </script>
-
-<style>
-    .modal {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .modal-content {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        width: 300px;
-        position: relative;
-        margin: auto; /* Ensure it stays centered */
-        top: 50%; /* Vertically center */
-        transform: translateY(-50%); /* Adjust for exact vertical centering */
-    }
-
-    .modal-content .close {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        font-size: 20px;
-        cursor: pointer;
-    }
-
-    .modal-content input {
-        width: 90%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    .modal-buttons {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-    }
-
-    .modal-buttons button {
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        flex: 1;
-    }
-
-    .modal-buttons button:hover {
-        background-color: #0056b3;
-    }
-
-    .modal-buttons button:nth-child(2) {
-        background-color: #6c757d;
-    }
-
-    .modal-buttons button:nth-child(2):hover {
-        background-color: #5a6268;
-    }
-</style>
 
       
         <div class="overall-section">

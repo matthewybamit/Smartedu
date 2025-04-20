@@ -69,6 +69,24 @@ if ($_SESSION['current_question'] >= count($questions)) {
         $insertQuery->execute();
     }
 
+    // Save the recent module to the database
+    $moduleImage = null;
+    if ($subject === 'english') {
+        $moduleImage = 'https://m.media-amazon.com/images/I/618JU+EmlBL._AC_UF1000,1000_QL80_.jpg';
+    } elseif ($subject === 'history') {
+        $moduleImage = 'photos/History of Asia.png';
+    }
+
+    if ($moduleImage) {
+        $recentModuleInsert = $conn->prepare("
+            INSERT INTO recent_modules (username, modules_pic) 
+            VALUES (:username, :modules_pic)
+        ");
+        $recentModuleInsert->bindParam(':username', $username);
+        $recentModuleInsert->bindParam(':modules_pic', $moduleImage);
+        $recentModuleInsert->execute();
+    }
+
     // Set total in session
     $_SESSION['total'] = $totalQuestions;
 
