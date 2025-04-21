@@ -1,5 +1,7 @@
 body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom,#122D64, #82A0DC);
+    background-repeat: no-repeat;
     
 }
 
@@ -9,6 +11,7 @@ header {
     color: #fff;
     
 }
+
 
 
 .image-button {
@@ -39,7 +42,7 @@ header {
 }
 
 .background{
-    height: 900px;
+    height: 1000px;
     display: flex;
     justify-content: center;
     
@@ -196,8 +199,10 @@ border-radius: 10px;
 color: #000;
 }
 .leftbox h1{
-    font-size: 30px;
-    margin-left: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+    margin-left: 29px;
     margin-top: 20px;
 }
 
@@ -271,9 +276,11 @@ white-space: nowrap;
 }
     
 .topmid h1{
-    font-size: 30px;
+    font-size: 25px;
     margin-left: 20px;
     margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
 }
 
 .scroll_topmid {
@@ -305,7 +312,7 @@ white-space: nowrap;
 .quiz {
     
         background-size: 100% 100%;
-        width: 190px; 
+        width: 250px; 
         height: 160px;
    
 }
@@ -369,12 +376,15 @@ white-space: nowrap;
     top: 360px;
     text-align: center;
     height:460px;
-    right: 140px;
+    right: 40px;
+    left: 1020px;
+    
     color:black;
 }
 
 .overall-section h2 {
     font-size: 24px;
+    font-weight: lighter;
     margin-bottom: 10px;
     color: #000;
 }

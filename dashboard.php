@@ -24,7 +24,7 @@ if ($query->rowCount() > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="CSS/dashboard.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -104,7 +104,7 @@ if ($query->rowCount() > 0) {
     </div>
     
     <div class="leftbox">
-        <h1>Recent Module</h1>
+        <h1 class="titlee">Recent Module</h1>
         <div class="scroll_leftbox">
             <div class="leftbox_grid">  
                 <div class="recent_module">
@@ -124,7 +124,7 @@ if ($query->rowCount() > 0) {
     </div>
     
     <div class="topmid">
-        <h1>Recent Activity</h1>
+        <h1 class="titlee">Recent Activity</h1>
         <div class="scroll_topmid">
             <div class="grid_topmid">
                 <img src="photos/quiz.png" class="quiz">

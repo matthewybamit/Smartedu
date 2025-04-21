@@ -11,7 +11,7 @@ $isLoggedIn = isset($_SESSION['email']) || isset($_SESSION['user_email']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
+    <title>Lumin</title>
     <link rel="stylesheet" href="CSS/MODULES.CSS">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navbar.css">
